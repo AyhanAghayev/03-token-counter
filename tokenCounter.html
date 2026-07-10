@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Token Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>LLM Dashboard</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="index.html#comparison">LLM Comparison</a></li>
+      <li><a href="index.html#model-cards">Model Cards</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="#tokenCounter">Token Counter</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="tokenCounter">
+
+      <h2>Token Counter</h2>
+
+      <p>
+        Paste any English text below to estimate how many tokens it would
+        consume when sent to an AI model.
+      </p>
+
+      <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
+
+      <p id="result">Estimated tokens: 0</p>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      LLM Dashboard Project - CSS Lab 02
+    </p>
+
+  </footer>
+
+  <script src="tokenCounter.js"></script>
+
+</body>
+</html>

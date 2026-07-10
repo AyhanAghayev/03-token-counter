@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>LLM Dashboard</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#what-is-llm">What is an LLM?</a></li>
+      <li><a href="#what-is-token">What is a Token?</a></li>
+      <li><a href="#comparison">LLM Comparison</a></li>
+      <li><a href="#model-cards">Model Cards</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="tokenCounter.html">Token Counter</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Section 1 -->
+    <section id="what-is-llm">
+
+      <h2>What is an LLM?</h2>
+
+      <p>
+        LLM stands for Large Language Model. It is a type of artificial
+        intelligence model trained on massive amounts of text data to understand
+        and generate human language.
+      </p>
+
+      <p>
+        LLMs work by analyzing patterns in text and predicting the next token
+        in a sequence. During training, the model learns grammar, facts,
+        reasoning patterns, and language structure from books, websites,
+        articles, and other datasets.
+      </p>
+
+      <p>
+        Today, LLMs are used for chatbots, coding assistants, translation,
+        summarization, research, and many other tasks.
+      </p>
+
+      <p>
+        Examples of popular LLMs include GPT-4o by OpenAI, Claude 3.5 Sonnet
+        by Anthropic, Gemini 1.5 Pro by Google, and Llama 3 by Meta.
+      </p>
+
+    </section>
+
+    <!-- Section 2 -->
+    <section id="what-is-token">
+
+      <h2>What is a Token?</h2>
+
+      <p>
+        A token is a small chunk of text processed by a language model.
+        Tokens are usually around 3–4 characters or about three quarters
+        of a word on average.
+      </p>
+
+      <p>
+        LLMs do not read full sentences directly. Instead, they break text
+        into tokens and process them one by one. Tokens are important because
+        context windows and pricing are measured in tokens.
+      </p>
+
+      <p>
+        For example, the sentence "Hello, world!" could be split into tokens
+        like:
+      </p>
+
+      <p>
+        "Hello" | "," | "world" | "!"
+      </p>
+
+      <p>
+        Different languages consume tokens differently. English is usually
+        more token-efficient than Azerbaijani because Azerbaijani words often
+        contain more suffixes and longer word forms.
+      </p>
+
+      <p>
+        For example:
+      </p>
+
+      <p>
+        English: "I am going to school."<br />
+        Azerbaijani: "Mən məktəbə gedirəm."
+      </p>
+
+      <p>
+        The Azerbaijani sentence may use more tokens because of the richer
+        word structure and suffix combinations.
+      </p>
+
+    </section>
+
+    <!-- Section 3 -->
+    <section id="comparison">
+
+      <h2>LLM Comparison</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Provider</th>
+            <th>Context Window</th>
+            <th>Input Price (per 1M tokens)</th>
+            <th>Output Price (per 1M tokens)</th>
+            <th>Reasoning</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>GPT-4o</td>
+            <td>OpenAI</td>
+            <td>128K</td>
+            <td>$5.00</td>
+            <td>$15.00</td>
+            <td class="reasoning-cell yes">✓</td>
+          </tr>
+
+          <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>Anthropic</td>
+            <td>200K</td>
+            <td>$3.00</td>
+            <td>$15.00</td>
+            <td class="reasoning-cell yes">✓</td>
+          </tr>
+
+          <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>Google</td>
+            <td>1M</td>
+            <td>$3.50</td>
+            <td>$10.50</td>
+            <td class="reasoning-cell yes">✓</td>
+          </tr>
+
+          <tr>
+            <td>Llama 3 70B</td>
+            <td>Meta</td>
+            <td>128K</td>
+            <td>$0.90</td>
+            <td>$0.90</td>
+            <td class="reasoning-cell no">✗</td>
+          </tr>
+
+          <tr>
+            <td>Mistral Large</td>
+            <td>Mistral AI</td>
+            <td>128K</td>
+            <td>$4.00</td>
+            <td>$12.00</td>
+            <td class="reasoning-cell yes">✓</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+    <!-- Section 4 -->
+    <section id="model-cards">
+
+      <h2>Model Cards</h2>
+
+      <div class="cards-grid">
+
+        <div class="card card--openai">
+          <div class="card-header">
+            <span class="card-provider">OpenAI</span>
+            <span class="card-reasoning reasoning-yes">Reasoning</span>
+          </div>
+          <h3 class="card-name">GPT-4o</h3>
+          <p class="card-tagline">Best for multimodal work that mixes text, images, and real-time voice.</p>
+          <ul class="card-specs">
+            <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+            <li><span class="spec-label">Input</span><span class="spec-value">$5.00 / 1M</span></li>
+            <li><span class="spec-label">Output</span><span class="spec-value">$15.00 / 1M</span></li>
+          </ul>
+        </div>
+
+        <div class="card card--anthropic">
+          <div class="card-header">
+            <span class="card-provider">Anthropic</span>
+            <span class="card-reasoning reasoning-yes">Reasoning</span>
+          </div>
+          <h3 class="card-name">Claude 3.5 Sonnet</h3>
+          <p class="card-tagline">Best for long documents and careful step-by-step analysis.</p>
+          <ul class="card-specs">
+            <li><span class="spec-label">Context</span><span class="spec-value">200K</span></li>
+            <li><span class="spec-label">Input</span><span class="spec-value">$3.00 / 1M</span></li>
+            <li><span class="spec-label">Output</span><span class="spec-value">$15.00 / 1M</span></li>
+          </ul>
+        </div>
+
+        <div class="card card--google">
+          <div class="card-header">
+            <span class="card-provider">Google</span>
+            <span class="card-reasoning reasoning-yes">Reasoning</span>
+          </div>
+          <h3 class="card-name">Gemini 1.5 Pro</h3>
+          <p class="card-tagline">Best when you need to fit an entire codebase into one prompt.</p>
+          <ul class="card-specs">
+            <li><span class="spec-label">Context</span><span class="spec-value">1M</span></li>
+            <li><span class="spec-label">Input</span><span class="spec-value">$3.50 / 1M</span></li>
+            <li><span class="spec-label">Output</span><span class="spec-value">$10.50 / 1M</span></li>
+          </ul>
+        </div>
+
+        <div class="card card--meta">
+          <div class="card-header">
+            <span class="card-provider">Meta</span>
+            <span class="card-reasoning reasoning-no">No Reasoning</span>
+          </div>
+          <h3 class="card-name">Llama 3 70B</h3>
+          <p class="card-tagline">Best for cheap, high-volume tasks you want to self-host.</p>
+          <ul class="card-specs">
+            <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+            <li><span class="spec-label">Input</span><span class="spec-value">$0.90 / 1M</span></li>
+            <li><span class="spec-label">Output</span><span class="spec-value">$0.90 / 1M</span></li>
+          </ul>
+        </div>
+
+        <div class="card card--mistral">
+          <div class="card-header">
+            <span class="card-provider">Mistral AI</span>
+            <span class="card-reasoning reasoning-yes">Reasoning</span>
+          </div>
+          <h3 class="card-name">Mistral Large</h3>
+          <p class="card-tagline">Best for multilingual European workloads with data-residency rules.</p>
+          <ul class="card-specs">
+            <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+            <li><span class="spec-label">Input</span><span class="spec-value">$4.00 / 1M</span></li>
+            <li><span class="spec-label">Output</span><span class="spec-value">$12.00 / 1M</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      LLM Dashboard Project - CSS Lab 02
+    </p>
+
+  </footer>
+
+</body>
+</html>

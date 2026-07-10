@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How an LLM Works</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>LLM Dashboard</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="index.html#comparison">LLM Comparison</a></li>
+      <li><a href="index.html#model-cards">Model Cards</a></li>
+      <li><a href="#timeline">How It Works</a></li>
+      <li><a href="tokenCounter.html">Token Counter</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="timeline">
+
+      <h2>How an LLM Works</h2>
+
+      <p>
+        From the moment you press Enter to the first word of the response,
+        here is what happens inside a large language model.
+      </p>
+
+      <ol class="timeline">
+
+        <li class="timeline-step">
+          <div class="step-marker">1</div>
+          <div class="step-content">
+            <h3>User Input</h3>
+            <p>
+              You type a prompt and submit it. This raw text is sent to the
+              model's API as plain text, waiting to be interpreted.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">2</div>
+          <div class="step-content">
+            <h3>Tokenisation</h3>
+            <p>
+              The tokeniser breaks the text into tokens: small chunks of roughly
+              3 to 4 characters. "Hello, world!" becomes
+              <code>["Hello", ",", " world", "!"]</code>. Each token is then
+              mapped to a unique integer ID.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">3</div>
+          <div class="step-content">
+            <h3>Embedding</h3>
+            <p>
+              Each token ID is looked up in an embedding table and converted into
+              a high-dimensional vector. These numbers encode the semantic meaning
+              of the token in a form the network can work with.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">4</div>
+          <div class="step-content">
+            <h3>Attention Layers</h3>
+            <p>
+              The vectors pass through dozens of transformer layers. At each layer,
+              the attention mechanism lets every token look at every other token
+              and decide which ones matter for its meaning in this context.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">5</div>
+          <div class="step-content">
+            <h3>Prediction</h3>
+            <p>
+              The final layer produces a probability for every token in the
+              vocabulary. Sampling settings such as temperature decide how boldly
+              the model picks from that distribution.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">6</div>
+          <div class="step-content">
+            <h3>Output Generation</h3>
+            <p>
+              The chosen token is appended to the prompt and the whole process
+              repeats, one token at a time, until the model emits a stop token.
+              That is why responses stream in word by word.
+            </p>
+          </div>
+        </li>
+
+      </ol>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      LLM Dashboard Project - CSS Lab 02
+    </p>
+
+  </footer>
+
+</body>
+</html>
